@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import hotelRouter from './dev/hotelRouter';
+import hotelRouter from './api/hotelRouter';
 
 const router = Router();
 
@@ -7,6 +7,6 @@ const router = Router();
 //router.use("/api", rfidRouter);
 
 //개발
-router.use("/dev", hotelRouter)
+router.use("/api", hotelRouter)
 
 export default router;

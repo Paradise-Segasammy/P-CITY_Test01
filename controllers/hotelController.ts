@@ -23,12 +23,12 @@ export const hotelController = async(req: Request, res:Response) => {
   }
   
   try {
-    const result: any = await insertMember();
+    const result: any = await insertMember(params);
     if (result.resultCode === 200) {
-      res.json(result);
+      //res.json(result);
       res.send(res);
     } else {
-      res.send(res);
+      //res.send(res);
       return 300;
     }
   } catch (e: any) {

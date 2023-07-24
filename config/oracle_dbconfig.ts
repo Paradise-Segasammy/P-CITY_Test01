@@ -1,11 +1,6 @@
 module.exports = {
-  
-  /*
-  HOST: 'localhost',
-  USER: 'root',
-  PASSWORD: 'asdf',
-  DB: 'rfid'
-  */
+  // 혹시몰라서 보안때메 지움
+
   "IRDEV": {
     user : "PIS_DEV",
     password: "PIS_DEVDB#1",

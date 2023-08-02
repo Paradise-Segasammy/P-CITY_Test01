@@ -12,13 +12,14 @@ export const connectDatabase = (MODE: string) => {
     } else if (MODE == 'IRDEV') {
       return oracledb.getConnection(oracleConfig.IRDEV);
 
-    } else if (MODE == 'TEST') {
+    } else if (MODE == 'mysql') {
+      const connection = mysql.createConnection(mysqlConfig);
+      connection.connect();
       console.log('mysql connected ..');
       //const connection = new Promise((resolve: any, reject: any) => { //await
-      return mysql.createConnection(mysqlConfig);
+      return connection;
       //})
     }
-  
 }
 
 

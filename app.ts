@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-
+const mysql = require('mysql');
 /*
 app.set('port', process.env.PORT || 1000);
 
@@ -40,7 +40,7 @@ app.use((err, req, res, next) => {
 
 */
 
-let port = 3000;
+let port = 5000;
 
 app.listen(port, () => {
   console.log(`Server running at port ${port}`);
@@ -50,7 +50,7 @@ app.use(Route);
 
 // GET 진입 시 실행
 app.get('/', (req, res) => {
-  res.json({message: "hello world!2"});
+  res.json( {message: "hello world!2"} );
 });
 
 export default app;

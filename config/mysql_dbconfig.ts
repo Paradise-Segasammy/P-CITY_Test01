@@ -4,5 +4,5 @@ module.exports = {
   user: 'root',
   password: 'asdf',
   database: 'hotel_info',
-  //connectionLimit?
+  connectionLimit: 10
 }

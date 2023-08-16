@@ -1,0 +1,1 @@
+module.exports = { q: `SELECT * FROM member` }

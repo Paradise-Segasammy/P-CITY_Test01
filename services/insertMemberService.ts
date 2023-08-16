@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const { connectDatabase } = require('../config/dbConnect');
+const { connectDatabase, pool } = require('../config/dbConnect');
 
 const signUpUser_Query = 'INSERT INTO member (USER_ID, USER_PW, CUST_NO, NAME, TEL, ADDRESS, EMAIL, BIRTHDAY, REG_DT) VALUES (?, ?, ?, ?, ?, ?, ?, ?, SYSDATE())'
 //const signUpUser_Query = 'INSERT INTO member (USER_ID, USER_PW, CUST_NO, NAME, TEL, ADDRESS, EMAIL, BIRTHDAY, REG_DT) VALUES (?, SYSDATE())'
@@ -8,8 +8,7 @@ const signUpUser_Query = 'INSERT INTO member (USER_ID, USER_PW, CUST_NO, NAME, T
 export const insertMember = async(params?: any) => {
   console.log(`param: ${JSON.stringify(params)}`);
   console.log(Object.values(params));
-  console.log(typeof params);
-
+  
   let connection: any;
   try {
     mysql.outFormat = mysql.OBJECT;

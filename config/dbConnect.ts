@@ -22,5 +22,9 @@ export const connectDatabase = (MODE: string) => {
     }
 }
 
+const pool = mysql.createPool(mysqlConfig);
+
 
  module.exports = { connectDatabase }
+
+ exports.pool = pool;
